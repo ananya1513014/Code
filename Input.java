@@ -4,52 +4,53 @@ import java.util.Scanner;
 
 public class Input {
 
-  private int noOfRows;
-  private int noOfColumns;
-  private int[][] matrix;
+	private int noOfRows;
+	private int noOfColumns;
+	private int[][] matrix;
 
-  static Scanner scannerObj = new Scanner(System.in);
+	static Scanner scannerObj = new Scanner(System.in);
 
-  public Input(Input _obj) {
-    this.noOfRows = _obj.noOfRows;
-    this.noOfColumns = _obj.noOfColumns;
-    this.matrix = _obj.matrix.clone();
-        
-  }
-  public Input() {
-    this.setNoOfRows();
-    this.setNoOfColumns();
-    this.setMatrix();
-  }
+	public Input(Input _obj) {
+		this.noOfRows = _obj.noOfRows;
+		this.noOfColumns = _obj.noOfColumns;
+		this.matrix = _obj.matrix.clone();
 
-  public int getNoOfRows() {
-    return noOfRows;
-  }
+	}
 
-  public void setNoOfRows() {
-    this.noOfRows = scannerObj.nextInt();
-  }
+	public Input() {
+		this.setNoOfRows();
+		this.setNoOfColumns();
+		this.setMatrix();
+	}
 
-  public int getNoOfColumns() {
-    return noOfColumns;
-  }
+	public int getNoOfRows() {
+		return noOfRows;
+	}
 
-  public void setNoOfColumns() {
-    this.noOfColumns = scannerObj.nextInt();
-  }
+	public void setNoOfRows() {
+		this.noOfRows = scannerObj.nextInt();
+	}
 
-  public int[][] getMatrix() {
-    return matrix;
-  }
+	public int getNoOfColumns() {
+		return noOfColumns;
+	}
 
-  public void setMatrix() {
-    this.matrix = new int[this.noOfRows][this.noOfColumns];
-    
-    for (int i = 0; i < this.noOfRows; i++) {
-      for (int j = 0; j < this.noOfColumns; j++) {
-        this.matrix[i][j] = scannerObj.nextInt();
-      }
-    }
-  }
+	public void setNoOfColumns() {
+		this.noOfColumns = scannerObj.nextInt();
+	}
+
+	public int[][] getMatrix() {
+		return matrix;
+	}
+
+	public void setMatrix() {
+		this.matrix = new int[this.noOfRows][this.noOfColumns];
+
+		for (int i = 0; i < this.noOfRows; i++) {
+			for (int j = 0; j < this.noOfColumns; j++) {
+				this.matrix[i][j] = scannerObj.nextInt();
+			}
+		}
+	}
 
 }
